@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col s12 m8 l6 offset-m2 offset-l3">
+      <div class="card">
+        <div class="card-action teal lighten-1 white-text">
+          <h3>Crear producto</h3>
+        </div>
+        <div class="card-content">
+        <form [formGroup]="fgValidator">
+          <div class="form-field">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" formControlName="nombre">
+          </div><br>
+          <div class="form-field">
+            <label for="precio">Precio</label>
+            <input type="text" id="precio" formControlName="precio">
+          </div><br>
+          <div class="form-field">
+            <label for="imagen">Imagen</label>
+            <input type="text" id="imagen" formControlName="imagen">
+          </div><br>
+          <div class="form-field">
+            <button [disabled]="!fgValidator.valid" (click)="crearProducto()" class="btn-large waves-effect waves-dark" style="width:100%;">
+                Crear producto
+            </button>
+          </div><br>
+        </form>
+        </div>
+  
+      </div>
+    </div>
+  </div>
